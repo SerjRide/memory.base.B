@@ -1,0 +1,129 @@
+body{
+    margin:0px;
+    background: #0F0F0F;
+    color:white;
+    font-family:Century Gothic;
+    font-size:11pt;
+
+}
+h2 {
+    margin-left:25px;
+}
+em {
+    color:green;
+    font-style: normal;
+}
+strong {
+    color:red;
+    font-weight:normal;
+}
+p {
+    margin-left:25px;
+}
+.column_1 {
+    float:left;
+}
+.column {
+    /*border: solid 2px white;*/
+    width:300px;
+    float:left;
+    padding-top:1px;
+}
+.column-right {
+    /*border: solid 2px white;*/
+    width:300px;
+    float:left;
+    padding-top:1px;
+    float:right;
+}
+.status {
+    border: solid 2px white; 
+    margin-left:10px;
+    margin-top:10px;
+    width:150px;
+    padding:5px;
+    float:left;
+    background:#1F1F1F;
+}
+.search {
+    border: solid 2px white; 
+    margin-left:10px;
+    margin-top:10px;
+    width:476px;
+    padding-top:20px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+    float:left;
+    background:#1F1F1F;
+}
+.center {
+    margin-left:18%;
+}
+.habits_1 {
+    margin:-1.25px;
+    width:150px;
+    padding:-1.25px;
+    float:left;
+}
+.skills {
+    border: solid 2px white; 
+    margin-left:10px;
+    margin-top:10px;
+    width:650px;
+    padding:5px;
+    float:left;
+    background:#1F1F1F;
+}
+.сustomers {
+    margin-left:10px;
+    margin-top:10px;
+    width:1200px;
+    padding:5px;
+    float:left;
+}
+.gouls {
+    margin-left:10px;
+    margin-top:10px;
+    width:300px;
+    padding:5px;
+    float:left;
+    background:#1F1F1F
+}
+.add {
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    padding-top:15px;
+    padding-left:15px;
+    padding-right:0px;
+    height:130px;
+    width:915px;
+    margin:0px;
+    float:left;
+
+}
+.del {
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    border-left: solid 2px white;
+    width:320px;
+    float:left;
+    padding-top:22px;
+    height:123px;
+}
+td {
+    padding-left:5px;
+    padding-right:5px;
+}
+.clear {
+    clear:both; /* Отмена позиционирования */
+}
+.progress {
+    border: solid 2px white; 
+    margin-left:10px;
+    margin-top:10px;
+    width:550px;
+    padding:5px;
+    float:left;
+    background:#1F1F1F;
+}
