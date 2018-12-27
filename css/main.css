@@ -149,11 +149,6 @@ input[name="found"]:hover {
     margin-left:0px;
     padding:0px;
 }
-form[name="del"] {
-    border-left:solid 0.5px white;
-    margin-top:-16;
-    padding:0;
-}
 
 input[name="corners"] {
     border:solid 1px yellow;
@@ -165,6 +160,24 @@ input[name="add"] {
 
 input[name="id"] {
     width:75px;
+}
+input[name="change"] {
+    width:16px;
+    height:16px;
+    margin-top:15px;
+    margin-bottom:0px;
+    margin-left:0px;
+    padding:0px;
+}
+
+input[name="change"]:hover {
+    border:solid 1px black;
+    width:16px;
+    height:16px;
+    margin-top:15px;
+    margin-bottom:0px;
+    margin-left:0px;
+    padding:0px;
 }
 
 /*
@@ -524,15 +537,17 @@ p {
     padding:5px;
     float:left;
 }
-.add {
-    border-top: solid 2px white;
-    border-bottom: solid 2px white;
+.options {
+    border-top: solid 0px white;
+    border-bottom: solid 0px white;
     padding-top:15px;
     padding-left:0px;
     padding-right:0px;
     height:130px;
     width:100%;
-    margin:0px;
+    margin-left:250px;
+    margin-bottom:60px;
+    margin-top:0px;
     float:left;
 }
 

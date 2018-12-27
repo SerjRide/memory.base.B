@@ -10,9 +10,9 @@
 </head>
 <body>
     
-    <div class="options">
-    <h2>Добавить заказ</b><br/></h2>
-    <form name="add" action="index.php" method="get">
+    
+    
+    <form name="add" action="index.php" method="post">
         <div class="column">
             <table>
                 <tr>
@@ -102,7 +102,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="column_add_button">
-                            <input type="submit" name="add" value="Добавить" />
+                            <input type="submit" name="add_bc" value="Изменить" />
                         </div>
                     </td>
                 </tr>
@@ -110,7 +110,7 @@
         </div>
     </form>
         <div class="column_5">
-    
+
         
         </div>
     </div>
