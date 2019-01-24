@@ -1,560 +1,138 @@
-body{
-    margin:0px;
-    background: #EDF1FD;
-    font-family:Century Gothic;
-    font-size:11pt;
+textarea[name="text"] {
+  resize:none;
+  height:300px;
+  font-size: 16pt;
 }
-
-h6 {
-    font-size:8pt;
-    font-weight:normal;
+textarea[name="answer"] {
+  resize:none;
+  font-size: 16pt;
+  height:110px;
 }
-
-.nav {
-    /*  ширна произвольная, не стесняйтесь экспериментировать */
-    width: 100px;
-    min-width: 200px;
-    /* фиксируем и выставляем высоту панели на максимум */
-    height: 100%;
-    position: fixed;position: fixed;
-    top: 0;
-    bottom: 0;
+textarea[name="question"] {
+  resize:none;
+  height:300px;
+  font-size: 16pt;
+}
+textarea[name="answer_2"] {
+  resize:none;
+  font-size: 16pt;
+  height:110px;
+}
+h2 {
+  text-align:center;
+}
+.myForm {
+  margin:0px;
+}
+.myButton-right{
+  margin-left:-4px;
+  background-color:white;
+  border:solid 1px #8C8C8C;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height:32px;
+}
+.myButton-left{
+  margin-right:-4px;
+  margin-top:1px;
+  background-color:white;
+  border:solid 1px #8C8C8C;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height:32px;
+}
+.myNumberForm{
+  height:32px;
+  margin:0px;
+  text-align: center;
+  border:solid 1px #8C8C8C;
+  cursor:default;
+}
+.myButton-right:hover {
+  background-color:#E3E3E3 ;
+  margin-left:-4px;
+  border:solid 1px #8C8C8C;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height:32px;
+}
+.myButton-left:hover {
+  background-color:#E3E3E3 ;
+  margin-right:-4px;
+  margin-top:1px;
+  border:solid 1px #8C8C8C;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height:32px;
+}
+.myNumberForm:hover {
+  background-color:#E3E3E3 ;
+  height:32px;
+  margin:0px;
+  text-align: center;
+  border:solid 1px #8C8C8C;
+}
+.myButton{
+  margin-left:-4px;
+  margin-right:-2px;
+  display: inline-flex;
+  align-items: flex-start;
+  background-color:white;
+  border:solid 1px #8C8C8C;
+  height:32px;
+}
+.myButton:hover {
+  margin-left:-4px;
+  margin-right:-2px;
+  display: inline-flex;
+  align-items: flex-start;
+  background-color:#E3E3E3;
+  border:solid 1px #8C8C8C;
+  height:32px;
+}
+.myBtn-danger{
+  background-color:white;
+}
+.myBtn-danger:hover {
+  background-color:#FF4747;
+}
+.myBtn-success{
+  background-color:white;
+}
+.myBtn-success:hover {
+  background-color:#6DFF2E;
+}
+.myBtn-warning{
+  background-color:white;
+}
+.myBtn-warning:hover {
+  background-color:#FFC92E;
+}
+.myBtn-info{
+  background-color:white;
+}
+.myBtn-info:hover {
+  background-color:#2EA0FF;
+}
+#question {
+  cursor:default;
+}
+#index-bg {
+  margin-top: -20px;
+  display:list-item;
+}
+.index-list {
+  background-image: url(https://offroadtoursad.ae/wp-content/uploads/2015/07/light-blue-wallpaper-hd-quality.jpg);
+  /* height:100%; */
+  width: 100%;
+  margin-top: -20px;
+  /* position: fixed;
+  z-index: 0; */
+  text-align: center;
+  /* background-repeat: repeat; */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     margin: 0;
-    /* сдвигаем (прячем) панель относительно левого края страницы */
-    left: -320px;
-    /* внутренние отступы */
-    padding: 0px 20px;
-    /* плавный переход смещения панели */
-    -webkit-transition: left 0.3s;
-    -moz-transition: left 0.3s;
-    transition: left 0.3s;
-    /* определяем цвет фона панели */
-    background: #A3CDFF;
-    /* поверх других элементов */
-    z-index: 2000;
-}
-
-.nav-toggle {
-    /* абсолютно позиционируем */
-    position: absolute;
-    /* относительно левого края панели */
-    left: 320px;
-    /* отступ от верхнего края панели */
-    top: 1em;
-    /* внутренние отступы */
-    padding: 0.5em;
-    /* определяем цвет фона переключателя
-     * чаще вчего в соответствии с цветом фона панели
-    */
-    background: inherit;
-    /* цвет текста */
-    color: black;
-    /* вид курсора */
-    cursor: pointer;
-    /* размер шрифта */
-    font-size: 1.2em;
-    line-height: 1;
-    /* всегда поверх других элементов страницы */
-    z-index: 2001;
-    /* анимируем цвет текста при наведении */
-    -webkit-transition: color .25s ease-in-out;
-    -moz-transition: color .25s ease-in-out;
-    transition: color .25s ease-in-out;
-}
-
-.nav-toggle:after {
-    content: '\2630';
-    text-decoration: none;
-}
-
-
-/* цвет текста при наведении */
-
-.nav-toggle:hover {
-    color: #f4f4f4;
-}
-
-[id='nav-toggle'] {
-    position: absolute;
-    display: none;
-}
-
-
-/**
- * изменение положения переключателя 
- * при просмотре на мобильных устройствах
- * когда навигация раскрыта, распологаем внутри панели
-*/
-
-[id='nav-toggle']:checked ~ .nav > .nav-toggle {
-    left: auto;
-    right: 2px;
-    top: 1em;
-}
-
-
-/**
- * Когда флажок установлен, открывается панель
- * используем псевдокласс:checked
- */
-
-[id='nav-toggle']:checked ~ .nav {
-    left: 0;
-    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    overflow-y: auto;
-}
-
-
-/* 
- * смещение контента страницы
- * на размер ширины панели,
- * фишка необязательная, на любителя
-*/
-
-[id='nav-toggle']:checked ~ main > article {
-    -webkit-transform: translateX(320px);
-    -moz-transform: translateX(320px);
-    transform: translateX(320px);
-}
-
-
-input[name="search"] {
-    
-
-    border:solid 0.5px white;
-    height:30px;
-    width:500px;
-    font-size:12pt;
-    margin-left:13%;
-    padding:10px;
-}
-
-input[name="found"] {
-    background:url('http://client.base/img/found.png');
-    border:solid 0px white;
-    width:60px;
-    height:30px;
-    margin-top:7px;
-    margin-left:0px;
-    padding:0px;
-}
-
-input[name="found"]:hover {
-    border:solid 0.05px white;
-    width:60px;
-    height:30px;
-    margin-top:7px;
-    margin-left:0px;
-    padding:0px;
-}
-
-input[name="corners"] {
-    border:solid 1px yellow;
-}
-
-input[name="add"] {
-    width:120px;
-}
-
-input[name="id"] {
-    width:75px;
-}
-input[name="change"] {
-    width:16px;
-    height:16px;
-    margin-top:15px;
-    margin-bottom:0px;
-    margin-left:0px;
-    padding:0px;
-}
-
-input[name="change"]:hover {
-    border:solid 1px black;
-    width:16px;
-    height:16px;
-    margin-top:15px;
-    margin-bottom:0px;
-    margin-left:0px;
-    padding:0px;
-}
-
-/*
- * изменение символа переключателя,
- * привычный крестик (MULTIPLICATION X), 
- * вы можете испльзовать любой другой значок
-*/
-
-[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
-    content: '\2715';
-}
-
-
-/**
- * профиксим баг в Android <= 4.1.2
- * см: http://timpietrusky.com/advanced-checkbox-hack
- */
-
-body {
-    -webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix {
-    to {
-      padding: 0;
-    }
-}
-
-
-/**
- * позаботьтимся о средних и маленьких экранах
- * мобильных устройств
- */
-
-@media screen and (min-width: 320px) {
-    html,
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    html,
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
-    .nav {
-      width: 100%;
-      box-shadow: none
-    }
-}
-
-
-/**
- * Формируем стиль заголовка (логотип) панели 
-*/
-
-.nav h2 {
-    width: 90%;
-    padding: 0;
-    margin: 10px 0;
-    text-align: center;
-    text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;
-    font-size: 1.3em;
-    line-height: 1.3em;
-    opacity: 0;
-    transform: scale(0.1, 0.1);
-    -ms-transform: scale(0.1, 0.1);
-    -moz-transform: scale(0.1, 0.1);
-    -webkit-transform: scale(0.1, 0.1);
-    transform-origin: 0% 0%;
-    -ms-transform-origin: 0% 0%;
-    -moz-transform-origin: 0% 0%;
-    -webkit-transform-origin: 0% 0%;
-    transition: opacity 0.8s, transform 0.8s;
-    -ms-transition: opacity 0.8s, -ms-transform 0.8s;
-    -moz-transition: opacity 0.8s, -moz-transform 0.8s;
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-}
-
-.nav h2 a {
-    color: #171717;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-/*плавное появление заголовка (логотипа) при раскрытии панели */
-
-[id='nav-toggle']:checked ~ .nav h2 {
-    opacity: 1;
-    transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    -moz-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-}
-
-
-/**
- * формируем непосредственно само меню
- * используем неупорядоченный список для пунктов меню
- * прикрутим трансфомации и плавные переходы
- */
-
-.nav > ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav > ul > li {
-    line-height: 2.5;
-    opacity: 0;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
-    -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
-    -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
-    transition: opacity .5s .1s, transform .5s .1s;
-}
-
-[id='nav-toggle']:checked ~ .nav > ul > li {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-}
-
-
-/* определяем интервалы появления пунктов меню */
-
-.nav > ul > li:nth-child(2) {
-    -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
-    transition: opacity .5s .2s, transform .5s .2s;
-}
-
-.nav > ul > li:nth-child(3) {
-    -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
-    transition: opacity .5s .3s, transform .5s .3s;
-}
-
-.nav > ul > li:nth-child(4) {
-    -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
-    transition: opacity .5s .4s, transform .5s .4s;
-}
-
-.nav > ul > li:nth-child(5) {
-    -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
-    transition: opacity .5s .5s, transform .5s .5s;
-}
-
-.nav > ul > li:nth-child(6) {
-    -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
-    transition: opacity .5s .6s, transform .5s .6s;
-}
-
-.nav > ul > li:nth-child(7) {
-    -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
-    transition: opacity .5s .7s, transform .5s .7s;
-}
-
-
-/**
- * оформление ссылок пунктов меню
- */
-
-.nav > ul > li > a {
-    display: inline-block;
-    position: relative;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1.2em;
-    color: #171717;
-    width: 100%;
-    text-decoration: none;
-    /* плавный переход */
-    -webkit-transition: color .5s ease, padding .5s ease;
-    -moz-transition: color .5s ease, padding .5s ease;
-    transition: color .5s ease, padding .5s ease;
-}
-
-
-/**
- * состояние ссылок меню при наведении
- */
-
-.nav > ul > li > a:hover,
-.nav > ul > li > a:focus {
-    color: black;
-    padding-left: 15px;
-}
-
-
-/**
- * линия подчеркивания ссылок меню
- */
-
-.nav > ul > li > a:before {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    -webkit-transition: width 0s ease;
-    transition: width 0s ease;
-}
-
-.nav > ul > li > a:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    background: black;
-    -webkit-transition: width .5s ease;
-    transition: width .5s ease;
-}
-
-
-/**
- * анимируем линию подчеркивания 
- * ссылок при наведении
- */
-
-.nav > ul > li > a:hover:before {
-    width: 0%;
-    background: #FFFFFF;
-    -webkit-transition: width .5s ease;
-    transition: width .5s ease;
-}
-
-.nav > ul > li > a:hover:after {
-    width: 0%;
-    background: transparent;
-    -webkit-transition: width 0s ease;
-    transition: width 0s ease;
-}
-
-@-webkit-keyframes bugfix {
-    to {
-      padding: 0;
-    }
-}
-
-em {
-    color:green;
-    font-style: normal;
-}
-strong {
-    color:red;
-    font-weight:normal;
-}
-p {
-    margin-left:25px;
-}
-
-.right {
-    float:right; 
-    padding-left:2%;
-    padding-right:2%;
-}
-
-.column_1 {
-    float:left;
-}
-.column {
-    border: solid 0px green;
-    width:300px;
-    height:115px;
-    float:left;
-    padding-top:1px;
-}
-.column_2 {
-    border: solid 0px green;
-    width:230px;
-    height:115px;
-    float:left;
-    padding-top:1px;
-}
-.column_3 {
-    border: solid 0px green;
-    width:200px;
-    height:115px;
-    float:left;
-    padding-top:1px;
-}
-.column_4 {
-    border: solid 0px green;
-    width:200px;
-    height:115px;
-    float:left;
-    padding-top:1px;
-}
-.column_5 {
-    border: solid 0px green;
-    width:200px;
-    height:115px;
-    float:left;
-    padding-top:1px;
-}
-/*.column_checkbox {
-    border: solid 2px red;
-    vertical-align: top;
-    width:300px;
-    height:30px;
-    float:left;
-    padding-top:1px;
-    padding-bottom:1px;
-}*/
-
-.column_add_button {
-    border: solid 0px red;
-    width:75px;
-    padding-top:9px;
-    padding-bottom:9px;
-    padding-right:0px;
-    padding-left:0px;
-}
-
-.search {
-    position: fixed;
-    width:110%;
-    height:36px;
-    margin-left:-105;
-    padding-top:5px;
-    padding-bottom:12px;
-    padding-left:5px;
-    padding-right:5px;
-    float:left;
-    background:#A3CDFF;
-}
-.center {
-    margin-left:18%;
-}
-.habits_1 {
-    margin:-1.25px;
-    width:150px;
-    padding:-1.25px;
-    float:left;
-}
-
-.сustomers {
-    margin-left:10px;
-    margin-top:10px;
-    width:1200px;
-    padding:5px;
-    float:left;
-}
-.options {
-    border-top: solid 0px white;
-    border-bottom: solid 0px white;
-    padding-top:15px;
-    padding-left:0px;
-    padding-right:0px;
-    height:130px;
-    width:100%;
-    margin-left:250px;
-    margin-bottom:60px;
-    margin-top:0px;
-    float:left;
-}
-
-td {
-    padding-left:5px;
-    padding-right:5px;
-}
-.clear {
-    clear:both; /* Отмена позиционирования */
 }
