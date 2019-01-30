@@ -88,6 +88,10 @@
             <?php $a = $mysqli->query("SELECT COUNT(1) FROM `other`"); $b = mysqli_fetch_array($a);?>
             <a class="btn" id="b10" href="http://memory.base.b/categories/other.php">Other (<?=$b[0]?>) <i id="i10"></i></a>
           </li>
+          <li class="nav-item">
+            <?php $a = $mysqli->query("SELECT COUNT(1) FROM `react`"); $b = mysqli_fetch_array($a);?>
+            <a class="btn" id="b11" href="http://memory.base.b/categories/react.php">React (<?=$b[0]?>) <i id="i11"></i></a>
+          </li>
         </ul>
       </div>
     </div>

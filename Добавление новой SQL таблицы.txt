@@ -1,0 +1,14 @@
+// заменить table name
+
+CREATE TABLE `table name` (
+  `id` int(10) NOT NULL,
+  `text` text NOT NULL,
+  `answer` varchar(255) NOT NULL,
+  `md5 text` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+ALTER TABLE `table name`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `table name`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+

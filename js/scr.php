@@ -190,6 +190,9 @@
     if (value.category === 'other'){
         $("#i10").removeClass().addClass("fas fa-exclamation text-danger");
     }
+    if (value.category === 'react'){
+        $("#i11").removeClass().addClass("fas fa-exclamation text-danger");
+    }
     if (Date.parse(value.data) < (new Date() - 1000*60*60*24*2)) {
         localStorage.removeItem(key);
     }
