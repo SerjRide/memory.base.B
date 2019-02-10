@@ -5,7 +5,7 @@ textarea[name="text"] {
 }
 textarea[name="answer"] {
   resize:none;
-  font-size: 16pt;
+  font-size: 12pt;
   height:110px;
 }
 textarea[name="question"] {
@@ -15,7 +15,7 @@ textarea[name="question"] {
 }
 textarea[name="answer_2"] {
   resize:none;
-  font-size: 16pt;
+  font-size: 12pt;
   height:110px;
 }
 h2 {
